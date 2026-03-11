@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "Diameter",
-      "ioValue": 10
+      "ioValue": 0,
+      "currentEquation": "0"
     },
     {
       "name": "DikteMateriaal",
@@ -37,7 +38,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 10
+          "ioValue": 0
         }
       ]
     },
@@ -70,6 +71,83 @@
       "y": 0.5735576923076924,
       "uniqueID": "id-14",
       "name": "DikteMateriaal"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.2791666666666667,
+      "y": 0.7729166666666667,
+      "uniqueID": "id-17",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 0
+        },
+        {
+          "name": "y length",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.10520833333333333,
+      "y": 0.8395833333333333,
+      "uniqueID": "id-21",
+      "name": "x * y",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 0
+        },
+        {
+          "name": "y",
+          "ioValue": 2
+        }
+      ],
+      "currentEquation": "x * y"
+    },
+    {
+      "atomType": "Constant",
+      "x": 0.03072916666666667,
+      "y": 0.875,
+      "uniqueID": "id-25",
+      "value": 2
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4088541666666667,
+      "y": 0.8104166666666667,
+      "uniqueID": "id-27",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 18
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.7828125,
+      "y": 0.6604166666666667,
+      "uniqueID": "id-31",
+      "ioValues": []
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.5494791666666667,
+      "y": 0.61875,
+      "uniqueID": "id-43",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        }
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -84,14 +162,44 @@
       "ap2ID": "id-4"
     },
     {
-      "ap2Name": "number or geometry",
+      "ap2Name": "x length",
+      "ap1ID": "id-7",
+      "ap2ID": "id-17"
+    },
+    {
+      "ap2Name": "x",
+      "ap1ID": "id-7",
+      "ap2ID": "id-21"
+    },
+    {
+      "ap2Name": "Shape 1",
       "ap1ID": "id-10",
-      "ap2ID": "id-2"
+      "ap2ID": "id-43"
     },
     {
       "ap2Name": "height",
       "ap1ID": "id-14",
       "ap2ID": "id-10"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "id-14",
+      "ap2ID": "id-27"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-17",
+      "ap2ID": "id-27"
+    },
+    {
+      "ap2Name": "y length",
+      "ap1ID": "id-21",
+      "ap2ID": "id-17"
+    },
+    {
+      "ap2Name": "y",
+      "ap1ID": "id-25",
+      "ap2ID": "id-21"
     }
   ],
   "unitsKey": "MM",
