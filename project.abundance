@@ -1,13 +1,100 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "dindeskmount",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "dindeskmount",
+  "ioValues": [
+    {
+      "name": "Diameter",
+      "ioValue": 10
+    },
+    {
+      "name": "DikteMateriaal",
+      "ioValue": 18,
+      "currentEquation": "18"
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.2682291666666667,
+      "y": 0.5354166666666667,
+      "uniqueID": "id-4",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.48125000000000007,
+      "uniqueID": "id-7",
+      "name": "Diameter"
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4041666666666667,
+      "y": 0.5583333333333333,
+      "uniqueID": "id-10",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 18
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.5735576923076924,
+      "uniqueID": "id-14",
+      "name": "DikteMateriaal"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4",
+      "ap2ID": "id-10"
+    },
+    {
+      "ap2Name": "diameter",
+      "ap1ID": "id-7",
+      "ap2ID": "id-4"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-10",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "id-14",
+      "ap2ID": "id-10"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
